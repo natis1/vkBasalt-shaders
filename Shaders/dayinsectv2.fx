@@ -1,9 +1,16 @@
 #include "ReShadeUI.fxh"
 
-// How many pixels should the radius of a single hexagon be? The image size will be
-// effectively 1/4th of this
-// Maximum for some large moths and dragonflies is ~170p or ~6 for 1080p (1080/6 = 180p)
-// Note that only every OTHER pixel is filled
+// How many pixels should the "radius" of a single hexagon be? The true number of pixels will be
+// approximately 1/3rd of this
+// eg if you set it to 6 at 1080p you get an image resolution of 1080/6 = 180p
+// but since only 1/3 of the pixels are filled. this becomes 180 * sqrt(1/3) = 103p.
+// Large moths and dragonflies are about 130p
+// while smaller ones may be only around 40-90p so take that into account when choosing your value.
+//
+//
+// note that the larger/more predatory the insect, the larger the eyes,
+// if humans were insects at our eye size we would be approximately 360p or so I think
+// but if you set it that way the effect becomes very hard to see so I would not recommend :(
 #define HEXAGON_RADIUS 8
 
 // Insects have fixed focus distances so 
