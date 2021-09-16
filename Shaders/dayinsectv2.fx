@@ -4,7 +4,7 @@
 // effectively 1/4th of this
 // Maximum for some large moths and dragonflies is ~170p or ~6 for 1080p (1080/6 = 180p)
 // Note that only every OTHER pixel is filled
-#define HEXAGON_RADIUS 16
+#define HEXAGON_RADIUS 8
 
 // Insects have fixed focus distances so 
 // Distance at which everything is in focus
@@ -36,7 +36,7 @@ uniform float UNFOCUSED_FAR <
     ui_step = 0.001;
     ui_tooltip = "Distance at which stuff is completely out of focus because it is too far away. Since every game and its mother uses its own distance system you will need to play with this for each game.";
     ui_type = "slider";
-> = 1.1;
+> = 1.8;
 
 uniform float DEPTH_MULTIPLIER <
     ui_category = "Depth Adjusting";
